@@ -7,14 +7,14 @@ PARAMS_KEY_MAPPER = {
 class CSVProductsImporter
   attr_reader :successfully_imported
 
-  def initialize(file:)
-    @file = file
+  def initialize(file_path:)
+    @file_path = file_path
     @stock_location = Spree::StockLocation.find_by(name: "default")
     @successfully_imported = 0
   end
 
   def call
-    CSV.foreach(@file.path, col_sep: ";", headers: true) do |row|
+    CSV.foreach(@file_path, col_sep: ";", headers: true) do |row|
       product = prepare_product(row)
 
       if product.valid?

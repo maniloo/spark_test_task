@@ -37,6 +37,7 @@ gem 'spree_gateway', '~> 3.3'
 
 # gem 'activerecord-import' for optimalize num of sql calls in import from CSV
 gem 'activerecord-import'
+gem 'sidekiq'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
