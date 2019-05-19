@@ -13,7 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-div.action_buttons {
-  margin-top: 10px;
-}

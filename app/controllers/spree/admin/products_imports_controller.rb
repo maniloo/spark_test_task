@@ -3,7 +3,7 @@ class Spree::Admin::ProductsImportsController < Spree::Admin::BaseController
 
   def create
     if incorrect_file_send
-      flash[:error] = "File not sended or type is inncorrect"
+      flash[:error] = "File not sent or type is inncorrect"
 
       redirect_to action: :new and return
     end

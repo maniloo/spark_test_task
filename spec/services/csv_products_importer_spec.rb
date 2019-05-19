@@ -12,7 +12,7 @@ RSpec.describe CSVProductsImporter do
       expect(Spree::Product.count).to eq(3)
     end
 
-    it "not add data when file data are incorrect" do
+    it "not add products when file data are incorrect" do
       CSVProductsImporter.new(file_path: "spec/mock_files/empty.csv").call
 
       expect(Spree::Product.count).to eq(0)
