@@ -8,3 +8,8 @@
  *= require_self
  *= require_tree .
 */
+
+div.action_buttons input[type="submit"] {
+  margin-top: 10px;
+  margin-right: 10px;
+}
